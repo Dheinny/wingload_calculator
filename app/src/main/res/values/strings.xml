@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WingLoad Calculator</string>
+    <string name="peso_atleta_lbl">Peso do Atleta</string>
+    <string name="tam_velame_lbl">Tamanho do Velame</string>
+    <string name="wing_load_lbl">Wing Load</string>
+    <string name="peso_unit">Kg</string>
+    <string name="tam_unit">fts</string>
+    <string name="botao_calc_lbl">Calcular</string>
+    <string name="titulo_app">Calculadora WingLoad</string>
+ </resources>
