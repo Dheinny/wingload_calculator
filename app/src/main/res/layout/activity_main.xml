@@ -1,144 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/titulo_app"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/pesoAtletaLbl"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="117dp"
-        android:text="@string/peso_atleta_lbl"
-        android:tooltipText="Peso do atleta equipado"
-        app:layout_constraintEnd_toStartOf="@+id/pesoAtletaValGroup"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/pesoAtletaValGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pesoAtletaLbl"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/pesoAtletaVal"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        >
 
         <TextView
-            android:id="@+id/pesoUnit"
+            android:id="@+id/titleApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/peso_unit"
-            app:layout_constraintBaseline_toBaselineOf="@+id/pesoAtletaVal"
-            app:layout_constraintStart_toEndOf="@+id/pesoAtletaVal" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/tamVelameLbl"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="77dp"
-        android:text="@string/tam_velame_lbl"
-        android:tooltipText="teste"
-        app:layout_constraintEnd_toStartOf="@+id/tamVelameValGroup"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/pesoAtletaLbl" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/tamVelameValGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tamVelameLbl"
-        app:layout_constraintTop_toBottomOf="@+id/pesoAtletaValGroup">
-
-        <EditText
-            android:id="@+id/tamVelameVal"
-            android:layout_width="120dp"
-            android:layout_height="0dp"
-            android:ems="10"
-            android:inputType="number"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tamUnit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/tam_unit"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tamVelameVal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/titulo_app"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tamVelameVal" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/skydiverWeightLbl"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="117dp"
+            android:labelFor="@id/skydiverWeightVal"
+            android:text="@string/peso_atleta_lbl"
+            android:tooltipText="Peso do atleta equipado"
+
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/skydiverWeightValGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/calc_radioGroup"
+            app:layout_constraintStart_toEndOf="@+id/skydiverWeightLbl"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/skydiverWeightVal"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:autofillHints="80"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weightUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/peso_unit"
+                app:layout_constraintBaseline_toBaselineOf="@+id/skydiverWeightVal"
+                app:layout_constraintStart_toEndOf="@+id/skydiverWeightVal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/canopySizeLbl"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="77dp"
+            android:labelFor="@id/canopySizeVal"
+            android:text="@string/tam_velame_lbl"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/skydiverWeightLbl" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/canopySizeValGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/calc_radioGroup"
+            app:layout_constraintStart_toEndOf="@+id/canopySizeLbl"
+            app:layout_constraintTop_toBottomOf="@+id/skydiverWeightValGroup">
+
+            <EditText
+                android:id="@+id/canopySizeVal"
+                android:layout_width="120dp"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:inputType="number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sizeUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/tam_unit"
+                app:layout_constraintBaseline_toBaselineOf="@+id/canopySizeVal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/canopySizeVal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/wingloadLbl"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:labelFor="@id/wingloadVal"
+            android:text="@string/wing_load_lbl"
+            app:layout_constraintBaseline_toBaselineOf="@+id/wingloadVal"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/wingloadVal"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="34dp"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toStartOf="@+id/calc_radioGroup"
+            app:layout_constraintStart_toEndOf="@+id/wingloadLbl"
+            app:layout_constraintTop_toBottomOf="@+id/canopySizeValGroup" />
+
+        <LinearLayout
+            android:id="@+id/calc_radioGroup"
+            android:layout_width="31dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/calc_icon_radio"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginHorizontal="5dp"
+                app:srcCompat="@drawable/calc_icon" />
+
+            <RadioGroup
+                android:id="@+id/fieldCalc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/skydiverWeight_radio"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="13dp" />
+
+                <RadioButton
+                    android:id="@+id/canopySize_radio"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginVertical="50dp" />
+
+                <RadioButton
+                    android:id="@+id/wingload_radio"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calcButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="calcParamAction"
+            android:text="@string/botao_calc_lbl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wingloadVal" />
+
+        <TextView
+            android:id="@+id/textTeste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calcButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/windLoadLbl"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/wing_load_lbl"
-        app:layout_constraintBaseline_toBaselineOf="@+id/wlResult"
-        app:layout_constraintEnd_toStartOf="@+id/wlResult"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/wlResult"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="48dp"
-        android:hint="WL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/windLoadLbl"
-        app:layout_constraintTop_toBottomOf="@+id/tamVelameValGroup" />
-
-    <Button
-        android:id="@+id/botaoCalcular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:onClick="calcWingLoadAction"
-        android:text="@string/botao_calc_lbl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wlResult" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
